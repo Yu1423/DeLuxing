@@ -29,8 +29,8 @@ int main(){
 	GRBsetintparam(env, "OutputFlag", 0);
 	cout << setprecision(PRINTDEC) << std::fixed;
 
-	GRBreadmodel(env, "R2_2_07.lp", &lp);
-	double UB = 3558.3000;
+    	GRBreadmodel(env, "RC207.lp", &lp);
+    	double UB = 1641.3708;
 	vector<int> Idxdel;
 	deLuxing(lp, UB, NCLUSTER, BETA1, BETA2, Idxdel, TOLERANCE, true);
 	GRBfreemodel(lp);
