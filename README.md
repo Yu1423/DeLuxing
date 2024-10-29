@@ -30,7 +30,7 @@ Column-Generation-Based Exact Methods_](https://optimization-online.org/?p=24217
 
 * main.cpp, which demonstrates how to use the DeLuxing function.
 * A Makefile to compile the example.
-* An example .lp file.
+* An example "RC207.lp" file.
 
 
 If you use this library for your research, please cite our paper.
