@@ -292,7 +292,8 @@ void deLuxing(GRBmodel *lp, double UB, int NClust, int beta1, int beta2, vector<
 		if(Verbose) cout << "Round " <<  std::setw(3) << r+1 << ", ite = " <<  std::setw(3) << ite  << ", deleted "<<  std::setw(len)  << ncol_del << " cols, # of cols remained = " <<  std::setw(len)  << NCol << endl;
 		ncol_del0 = 0;
 	}
-
+	
+	GRBgetintattr(lp, "NumVars", &NCol);
 	iota(idx, idx+NCol, 0);
 	GRBdelvars(lp, NCol, idx);
 	GRBupdatemodel(lp);
