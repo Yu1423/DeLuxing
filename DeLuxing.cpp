@@ -76,7 +76,7 @@ void deLuxing(GRBmodel *lp, double UB, int NClust, int beta1, int beta2, vector<
 		matbeg[k+1] = numnzP;
 		obj_real[k] = cobj[RCVec[k].second];
 	}
-	int* idx = new int[NCol];
+	int* idx = new int[NCol+NRow];
 	vector<uint32_t> clusters(NCol, 0);
 	double t2 = getWallTime();
     int len = (int) log10 ((double) (NCol-ncol_del0)) + 1;
